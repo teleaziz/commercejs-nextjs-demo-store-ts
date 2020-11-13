@@ -7,7 +7,7 @@ import reduceProductImages from '../../lib/reduceProductImages';
 import { BuilderComponent, builder, Builder } from '@builder.io/react';
 import '../../components/ProductPageContent/ProductPageContent.builder';
 
-builder.init(process.env.BUILDER_API_KEY);
+builder.init('9086974b3923490fb841fa78124de864');
 Builder.isStatic = true;
 
 
@@ -64,7 +64,7 @@ export async function getStaticProps({ params: { permalink } }) {
     props: {
       product,
       // parsing and stringifying to remove undefined values that next complained about
-      builderPage: JSON.parse(JSON.stringify(builderPage)),
+      ...( builderPage && { builderPage: JSON.parse(JSON.stringify(builderPage))}),
     },
   };
 }
