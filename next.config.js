@@ -10,7 +10,8 @@ module.exports = withSass({
     return config
   },
   env: {
-    'CHEC_PUBLIC_KEY': process.env.CHEC_PUBLIC_KEY
+    'CHEC_PUBLIC_KEY': process.env.CHEC_PUBLIC_KEY,
+    'BUILDER_API_KEY': '9086974b3923490fb841fa78124de864'
   }
 })
 

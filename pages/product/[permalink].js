@@ -7,7 +7,7 @@ import reduceProductImages from '../../lib/reduceProductImages';
 import { BuilderComponent, builder, Builder } from '@builder.io/react';
 import '../../components/ProductPageContent/ProductPageContent.builder';
 
-builder.init('9086974b3923490fb841fa78124de864');
+builder.init(process.env.BUILDER_API_KEY);
 Builder.isStatic = true;
 
 
